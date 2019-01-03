@@ -6,33 +6,34 @@ export interface Props {
     loginForm: any
     onLogin: () => void
 }
-
-const Login = (props: Props) => (
-    <Container>
-        <Header style={{ height: 200 }}>
-            <Body style={{ alignItems: "center" }}>
-                <Title>Utility App</Title>
-                <View padder>
-                    <Text style={{ color: Platform.OS === "ios" ? "#000" : "#FFF" }} />
-                </View>
-            </Body>
-        </Header>
-        <Content>
-            {props.loginForm}
-            <View padder>
-                <Button block onPress={() => props.onLogin()}>
-                    <Text>Login</Text>
-                </Button>
-            </View>
-        </Content>
-        <Footer style={{ backgroundColor: "#F8F8F8" }}>
-            <View style={{ alignItems: "center", opacity: 0.5, flexDirection: "row" }}>
-                <View padder>
-                    <Text style={{ color: "#000" }}>Made by me.</Text>
-                </View>
-            </View>
-        </Footer>
-    </Container>
-)
-
-export default Login
+export default class Login extends React.Component<Props> {
+    render() {
+        return (
+            <Container>
+                <Header style={{ height: 200 }}>
+                    <Body style={{ alignItems: "center" }}>
+                        <Title>Utility App</Title>
+                        <View padder>
+                            <Text style={{ color: Platform.OS === "ios" ? "#000" : "#FFF" }} />
+                        </View>
+                    </Body>
+                </Header>
+                <Content>
+                    {this.props.loginForm}
+                    <View padder>
+                        <Button block onPress={() => this.props.onLogin()}>
+                            <Text>Login</Text>
+                        </Button>
+                    </View>
+                </Content>
+                <Footer style={{ backgroundColor: "#F8F8F8" }}>
+                    <View style={{ alignItems: "center", opacity: 0.5, flexDirection: "row" }}>
+                        <View padder>
+                            <Text style={{ color: "#000" }}>Made by me.</Text>
+                        </View>
+                    </View>
+                </Footer>
+            </Container>
+        )
+    }
+}

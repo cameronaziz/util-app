@@ -6,6 +6,6 @@ import Sidebar from "../index"
 const navigation = { navigate: jest.fn() }
 
 it("renders correctly", () => {
-  const tree = renderer.create(<Sidebar navigation={navigation} />).toJSON()
-  expect(tree).toMatchSnapshot()
+    const tree = renderer.create(<Sidebar navigation={navigation} />).toJSON()
+    expect(tree).toMatchSnapshot()
 })
