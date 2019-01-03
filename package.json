@@ -64,7 +64,7 @@
     "redux-form": "^8.1.0",
     "redux-persist": "5.10.0",
     "redux-thunk": "2.3.0",
-    "remote-redux-devtools": "0.5.14",
+    "remote-redux-devtools": "^0.5.14",
     "remote-redux-devtools-on-debugger": "^0.8.3"
   }
 }
